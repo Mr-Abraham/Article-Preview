@@ -130,12 +130,12 @@ img{
     .container{
         display: flex;
         flex-direction: column;
-        height: 90vh;
+        height: 80vh;
         box-shadow: 0 0 10px  #ddd;
         width: 70vw;
     }
     .container-left{
-    height: 20vh;
+    height: 40vh;
         width:100%;
     }
     .container-right{
@@ -154,13 +154,13 @@ img{
     }
     .container-right h1{
         font-weight: 400;
-        font-size: 1rem;
+        font-size: .81rem;
     }
     .container-right p{
         font-size: .75rem;
         font-weight: 400;
         color: hsl(210, 6%, 55%);
-        margin-top: 1rem ; 
+        margin-top: .51rem ; 
         padding: 1em;
         line-height: 1.6;
 
