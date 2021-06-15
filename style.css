@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: hsl(210, 46%, 95%);
+    font-family: 'Manrope', sans-serif;
+    line-height: 1.35;
+}
+img{
+    max-width: 100%;
+
+}
+.container{
+    height: 250px;
+    width: 700px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 15px;
+}
+.container-left{
+    width: 35%;
+}
+.container-left img{
+    height: 100%;
+    border-radius: 15px 0 0px 15px;
+}
+.container-right{
+    width: 65%;
+    padding: 1em;
+    background: hsl(10, 1%, 95%);
+}
+.container-right h1{
+    font-weight: 400;
+    font-size: 1.14rem;
+    color: hsl(217, 9%, 25%);
+    padding: .51rem;
+}
+.container-right p{
+    font-size: .91rem;
+    font-weight: 400;
+    color: hsl(210, 6%, 55%);
+    margin-top: 1rem;
+    padding: .5em;
+    line-height: 1.6;
+}
+.right-bottom{
+    display: flex;
+    align-items: center;
+}
+.share{
+    justify-content: flex-start;
+    padding: .5em;
+    background: hsl(217, 19%, 35%);
+    border-radius: 50%;
+    position: relative;    
+    top: 10px;
+    z-index: 99999;
+}
+.share img{
+    width: 20px;
+    filter: invert(-1);
+    z-index: 99999;
+}
+.share:hover,
+.share-field{
+    cursor: pointer;
+}
+.avatar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5em;
+}
+.avatar img{
+    width: 15%;
+    border-radius: 50%;
+    position: relative;
+    top: 7px;
+}
+.avatar p{
+    font-size: .75em;
+    color: hsl(217, 19%, 35%) ;
+}
+#date{
+    color: hsl(210, 6%, 65%);
+}
+.share-field{
+    display: none;
+}
+
+.share-field.active{
+    /* border: 1px solid red; */
+    position: absolute;
+    z-index: 1;
+    right: 30px;
+    width: 195px;
+    display: flex;
+    bottom: 80px;
+    background:hsl(217, 19%, 35%);
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.share-field img{
+    width: 20px;
+}
+.share-field p{
+    font-size: 1em;
+    color: hsl(210, 6%, 55%);
+    position: relative;
+    bottom: 8px;
+}
+@media  (max-width:750px) {
+ 
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        box-shadow: 0 0 10px  #ddd;
+        width: 70vw;
+    }
+    .container-left,
+    .container-right{
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 15px 15px;
+    }
+    .container-left img{
+        border-radius:  15px 15px 0 0;
+    }
+    .right-bottom{
+        display: flex;
+        justify-content: space-between;
+        padding: .35em;
+    }
+    .container-right h1{
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    .container-right p{
+        font-size: .75rem;
+        font-weight: 400;
+        color: hsl(210, 6%, 55%);
+        margin-top: 1rem ; 
+        padding: 1em;
+        line-height: 1.6;
+
+    }
+ 
+    .share-field.active{
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        width: 100%;
+        min-height: 50px;
+        display: flex;
+        bottom: 0px;
+        background:hsl(217, 19%, 35%);
+        gap: 0;
+        justify-content: start;
+        height: 30px;
+        border-radius: 5px;
+        padding: 1em;
+    }
+    .right-bottom{
+        display: flex;
+        align-items: center;
+        position: relative;
+        /* bottom: 0px; */
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .avatar p{
+        font-size: .6em;
+    }
+
+    .share{
+        right: 0x;
+    }
+    .share.active{
+        background: cornsilk;
+        right: 5px;
+        transition: all .5s ease;
+    }
+    .share-field.active p{
+   color: hsl(210, 6%, 55%);
+   bottom: 2px;
+   position: absolute;
+   left: 0;
+    }
+    .share-field.active {
+        gap: 2px;
+    }
+    .share-field.active img{
+        width: 15px;
+        position: relative;
+        left: 40px;
+        margin-left: 2px;
+    }
+    
+}
